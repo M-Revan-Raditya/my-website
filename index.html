@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khaeve Restaurant</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-   <div id="sidebar" class="sidebar">
+  <!-- Sidebar -->
+  <nav id="sidebar" class="sidebar">
     <button class="close-btn" onclick="closeSidebar()">×</button>
     <a href="#home" onclick="closeSidebar()">Home</a>
     <a href="#menu" onclick="closeSidebar()">Menu</a>
     <a href="https://wa.me/62895385589497?text=Halo%20saya%20ingin%20pesan%20di%20Khaeve%20Restaurant" target="_blank">Kontak</a>
-  </div>
+  </nav>
 
-    <header class="header">
-      <button class="open-btn" onclick="openSidebar()">☰</button>
-    <h1>KHAEVE RESTAURANT🍽️</h1>
+  <!-- Header -->
+  <header class="header" id="home">
+    <button class="open-btn" onclick="openSidebar()">☰</button>
+    <h1>KHAEVE RESTAURANT 🍽️</h1>
     <p>Restaurant Terbaik Sejak 1975</p>
-    </header>
+  </header>
 
-<div class="pembuka">
-  <div class="teks">
+  <!-- Section: Pembuka -->
+  <section class="pembuka">
+    <div class="teks">
       <h1>Welcome</h1>
-       <p>Selamat Datang di website Khaeve Restaurant, disini memilki banyak menu untuk dihidangkan yang bisa
-         mengunggah selera makan anda, dan rasa ingin terus mengunya dengan makanannya</p>
+      <p>
+        Selamat Datang di website Khaeve Restaurant. Kami memiliki banyak menu
+        yang menggugah selera makan Anda dan membuat Anda ingin terus menikmati makanan kami.
+      </p>
     </div>
-      <div class="gambar">
-        <img src="fotopembuka.jpg" alt="pembuka">
-      </div>
-</div>
+    <div class="gambar">
+      <img src="foto pembuka.jpg" alt="pembuka">
+    </div>
+  </section>
 
-   <main class="content" id="menu">
+  <!-- Section: Menu -->
+  <main class="content" id="menu">
     <h4>DAFTAR BEST SELLER MENU</h4>
     <div class="menu-makanan">
-     <div class="makanan">
-        <a href="egg.html" target="_blank"></a>
-        <img src="egg-removebg-preview.png" width="229" height="229" alt="egg">
+
+      <div class="makanan">
+        <a href="egg.html" target="_blank">
+          <img src="egg-removebg-preview.png" alt="Egg Benedict">
+        </a>
         <p>Egg Benedict</p>
-        <blockquote>Rp. 75000</blockquote>
-        <a href="egg.html" target="_blank" class="button" onclick="showPage('Lihat Detail')">Lihat Detail</a>
-     </div>
+        <blockquote>Rp. 75.000</blockquote>
+        <a href="egg.html" target="_blank" class="button">Lihat Detail</a>
+      </div>
 
-     <div class="makanan">
-        <a href="#" target="_blank"></a>
-        <img src="mapo tofu.jpg" width="229" height="auto" alt="tofu">
+      <div class="makanan">
+        <a href="mapo doufu.html" target="_blank">
+          <img src="mapo tofu.jpg" alt="Mapo Doufu">
+        </a>
         <p>Mapo Doufu</p>
-        <blockquote>Rp. 60000</blockquote>
-        <a href="mapo doufu.html" target="_blank" class="button" onclick="showPage('Lihat Detail')">Lihat Detail</a>
-     </div>
+        <blockquote>Rp. 60.000</blockquote>
+        <a href="mapo doufu.html" target="_blank" class="button">Lihat Detail</a>
+      </div>
 
-     <div class="makanan">
-        <a href="#" target="_blank"></a>
-        <img src="Chou Farci.jpg" width="229" height="229" alt="kubis">
+      <div class="makanan">
+        <a href="chou farci.html" target="_blank">
+          <img src="Chou Farci.jpg" alt="Chou Farci">
+        </a>
         <p>Chou Farci</p>
-        <blockquote>Rp. 75000</blockquote>
-        <a href="chou farci.html" target="_blank" class="button" onclick="showPage('Lihat Detail')">Lihat Detail</a>
-     </div>
+        <blockquote>Rp. 75.000</blockquote>
+        <a href="chou farci.html" target="_blank" class="button">Lihat Detail</a>
+      </div>
 
-     <div class="makanan">
-        <a href="#" target="_blank"></a>
-        <img src="souffle-omelette.jpg" width="230" height="229" alt="telor">
+      <div class="makanan">
+        <a href="souffle omelette.html" target="_blank">
+          <img src="souffle-omelette.jpg" alt="Soufflé Omelette">
+        </a>
         <p>Soufflé Omelette</p>
-        <blockquote>RP. 100000</blockquote>
-        <a href="souffle omelette.html" target="_blank" class="button" onclick="showPage('Lihat Detail')">Lihat Detail</a>
-     </div>
+        <blockquote>Rp. 100.000</blockquote>
+        <a href="souffle omelette.html" target="_blank" class="button">Lihat Detail</a>
+      </div>
 
-     <div class="makanan">
-        <a href="#" target="_blank"></a>
-        <img src="Chocolate-Semifreddo.jpg" width="229" height="229" alt="ice">
+      <div class="makanan">
+        <a href="Semifreddo.html" target="_blank">
+          <img src="Chocolate-Semifreddo.jpg" alt="Semifreddo">
+        </a>
         <p>Semifreddo</p>
-        <blockquote>Rp. 150000</blockquote>
-        <a href="Semifreddo.html" target="_blank" class="button" onclick="showPage('Lihat Detail')">Lihat Detail</a>
-     </div>
+        <blockquote>Rp. 150.000</blockquote>
+        <a href="Semifreddo.html" target="_blank" class="button">Lihat Detail</a>
+      </div>
     </div>
-    </main>
- 
-    <div class="footer">
-      <p>&copy; 2025 Khaeve Restaurant | Web ini dibuat dengan oleh Muhamad Revan Raditya</p>
-    </div>
-    <script>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Khaeve Restaurant | Web ini dibuat oleh Muhamad Revan Raditya</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
     function openSidebar() {
       document.getElementById("sidebar").style.width = "250px";
     }
@@ -88,6 +103,6 @@
       document.getElementById("sidebar").style.width = "0";
     }
   </script>
-</body>
 
+</body>
 </html>
