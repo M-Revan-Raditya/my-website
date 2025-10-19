@@ -224,97 +224,7 @@ a.button:hover {
   color: white;
 }
 
-/* 🌐 RESPONSIVE DESIGN */
 
-/* Tablet dan HP sedang */
-@media (max-width: 900px) {
-  .pembuka {
-    flex-direction: column;      /* ubah dari 2 kolom jadi 1 */
-    text-align: center;
-    padding: 20px;
-  }
-
-  .pembuka .teks {
-    text-align: center;
-  }
-
-  .pembuka .gambar {
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .gambar img {
-    width: 80%;
-    height: auto;
-  }
-
-  .menu-makanan {
-    flex-wrap: wrap;             /* biar turun ke bawah kalau sempit */
-    gap: 20px;
-  }
-
-  .makanan {
-    width: 45%;
-  }
-
-  .header h1 {
-    font-size: 1.8rem;
-  }
-
-  .header p {
-    font-size: 1rem;
-  }
-}
-
-/* HP kecil (≤600px) */
-@media (max-width: 600px) {
-  .pembuka {
-    padding: 15px;
-  }
-
-  .teks h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .teks p {
-    font-size: 1rem;
-    text-align: justify;
-  }
-
-  .gambar img {
-    width: 100%;
-    height: auto;
-  }
-
-  .menu-makanan {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .makanan {
-    width: 90%;
-  }
-
-  h1, h4 {
-    font-size: 1.5rem;
-  }
-
-  .open-btn {
-    font-size: 20px;
-    top: 10px;
-    left: 15px;
-  }
-
-  .sidebar a {
-    font-size: 16px;
-  }
-
-  .footer p {
-    font-size: 0.9rem;
-  }
-}
 
 
 /* Animasi fade-in + slide-up */
@@ -397,4 +307,5 @@ a.button:hover {
 .footer {
   animation: fadeSlideUp 1.5s ease forwards;
 }
+
 
