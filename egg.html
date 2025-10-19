@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.egg {
+background: 
+    linear-gradient(rgba(0, 0, 0, 0.5)), 
+    url("egg background.jpg");
+ background-size: cover;            /*biar ukurannya se cover*/
+ background-position: center;       /*biar posisi backgroundnya ada ditengah*/
+ width: 100%;                       /*lebar penuh layar*/
+ height: 100vh;                     /*lebar penuh 1 layar*/
+ padding-top: 10px;                 /*agar tidak ada jarak pada bagian atas*/
+ display: flex;                     /*bikin flexbox */
+ align-items: center;               /*konten sejajar vertikal */
+ justify-content: space-between;    /*beri jarak kiri & kanan */
+ padding: 40px;                     /*biar gak nempel pinggir */
+ box-sizing: border-box;             /*mengatur ukuran box */
+}
+
+.egg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background:linear-gradient(to right, rgba(208, 130, 74, 0.6) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.egg-text {
+  flex: 1;                        /* isi setengah kiri */
+  color: white;
+  max-width: 600px;              /*bentuk maksimum buat ukuran teksnya*/
+   z-index: 2;                   /* di atas overlay */
+}
+
+.egg-text h1 {
+  font-size: 3rem;            /*mengatur ukuran font*/
+  margin-bottom: 20px;
+}
+
+.egg-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.egg-image {
+  flex: 1;                         /* isi setengah kanan */
+  display: flex;
+  justify-content: flex-end; /* foto ke kanan */
+  align-items: center;
+}
+
+.egg-image img {
+  width: 350px;                /* biar nggak kepenuhan */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  margin-right: 100px;
+}
+
+.ciri-egg {
+ background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("eggs-benedict.jpg");
+ background-size: cover;            /*biar ukurannya se cover*/
+ background-position: center;       /*biar posisi backgroundnya ada ditengah*/
+ width: 100%;                       /*lebar penuh layar*/
+ height: 100vh;                     /*lebar penuh 1 layar*/
+ padding-top: 10px;                 /*agar tidak ada jarak pada bagian atas*/
+ display: flex;                     /*bikin flexbox */
+ align-items: center;               /*konten sejajar vertikal */
+ justify-content: space-between;    /*beri jarak kiri & kanan */
+ padding: 40px;                     /*biar gak nempel pinggir */
+ box-sizing: border-box;
+  position: relative;
+  flex-direction: row-reverse;
+}
+
+.ciri-egg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background:linear-gradient(to left, #F5B041 0%, transparent 100%);
+  z-index: 1;
+}
+
+
+.ciri-text {
+  flex: 1;                        /* isi setengah kiri */
+  color: whitesmoke;
+  max-width: 600px;
+   z-index: 2;                   /* di atas overlay */
+}
+
+.ciri-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.ciri-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.gambar-telur {
+  flex: 1;                         /* isi setengah kanan */
+  display: flex;
+  justify-content: flex-start; /* foto ke kiri */
+  align-items: center;
+}
+
+.gambar-telur img {
+  width: 350px;                /* biar nggak kepenuhan */
+  height: auto;
+  margin-left: 100px;
+}
+
+.btn {
+  text-align: center;
+  margin: 20px;
+  border: none;                /* hapus border default */
+  padding: 20px 20px;          /* ukuran tombol */
+}
+
+.btn button {
+  background-color: #DAA520;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 20px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btn button:hover {
+  background-color: #b8860b;   /* warna lebih gelap saat hover */
+}
+
+.back-btn {
+    position: absolute; /* Posisi relatif terhadap .egg */
+    top: 10px;          /* Jarak dari atas */
+    left: 10px;         /* Jarak dari kiri */
+    padding: 8px 12px;  /* Ukuran tombol */
+    background-color: #f8d775; /* Warna tombol */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;  /* Biar agak bundar */
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #e6c155;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan animasi ke header, menu, dan footer */
+.egg, .ciri-egg, .btn {
+  opacity: 0; /* mulai dari transparan */
+  animation: fadeSlideIn 1s ease forwards; /* animasi 1 detik */
+}
+/* Tambahkan delay untuk elemen berbeda supaya urut */
+.egg-text {
+  animation-delay: 0.2s;
+}
+.ciri-text {
+  animation-delay: 0.5s;
+}
+.btn {
+  animation-delay: 0.8s;
+}
+
+    </style>
+</head>
+<body>
+    <section class="egg">
+        <div class="egg-text">
+          <a href="index.html" class="back-btn">Kembali</a>
+         <h1>Egg Benedict</h1>
+          <p>Eggs Benedict adalah hidangan sarapan atau brunch khas Barat yang cukup populer di restoran-restoran bergaya 
+             Amerika atau Eropa. Hidangan ini terkenal sebagai makanan “mewah” untuk sarapan karena tampilannya elegan dan
+             rasanya kaya.</p>
+        </div>
+        <div class="egg-image">
+          <img src="telur.jpg" alt="telur">
+        </div>
+    </section>
+    <section class="ciri-egg">
+        <div class="ciri-text">
+            <h2>Komponen Utama Eggs Benedict:</h2>
+             <ol>
+                <li>
+                    <strong>English Muffin</strong> – Roti bundar kecil yang dibelah dua, kemudian dipanggang hingga 
+                             garing di luar tapi tetap lembut di dalam.
+                 </li>
+                 
+                 <li>
+                    <strong>Poached Egg</strong> – Telur rebus setengah matang yang dimasak tanpa cangkang di air panas 
+                             (bukan mendidih), sehingga putihnya lembut membungkus kuning telur yang masih cair.
+                </li>
+                 
+                 <li>
+                     <strong>Canadian Bacon atau Ham</strong> – Potongan daging asap/ham yang biasanya ditaruh di atas roti. 
+                              Pada variasi lain bisa diganti dengan salmon asap (Eggs Royale), bayam (Eggs Florentine), atau bahkan daging sapi.
+                 </li>
+
+                 <li>
+                    <strong>Saus Hollandaise</strong> – Saus kental berwarna kuning pucat yang dibuat dari kuning telur, 
+                             mentega cair, dan sedikit jus lemon atau cuka. Memberi cita rasa creamy dan asam segar khas Eggs Benedict.
+                </li>
+             </ol>
+<div class="btn">            
+<button onclick="tanyaNama()">Pesan Di sini!</button>
+</div>
+
+<script>
+function tanyaNama() {
+  let nama = prompt("Masukan Jumlah Pesanan?");
+  if (nama) {
+    alert("Pesanan anda adalah, " + nama + "jumlah!");
+  }
+}
+</script>
+
+        </div>
+        <div class="gambar-telur">
+            <img src="egg-removebg-preview.png" alt="telur2">
+        </div>
+    </section>
+</body>
+</html>
