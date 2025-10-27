@@ -95,10 +95,13 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+   display: flex;
+  
   background: linear-gradient(to bottom, #8B5A2B, #a86e3b);
-  padding: 3rem 2rem;
+  padding: 40px;
   color: white;
+  gap: 20px;
 }
 
 .teks h1 {
@@ -200,3 +203,4 @@ a.button:hover {
   .pembuka { padding: 2rem 1rem; }
   .content { padding: 1.5rem 1rem; }
 }
+
